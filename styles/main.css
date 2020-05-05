@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  background-color: #1c1c1c; }
+
+.stopwatch {
+  position: relative;
+  margin: 100px auto 0;
+  width: 600px;
+  height: 600px;
+  border: 2px solid green;
+  border-radius: 50%;
+  background-color: rgba(0, 128, 0, 0.3); }
+  .stopwatch::before {
+    content: "";
+    position: absolute;
+    width: 0.4em;
+    height: 45%;
+    left: 50%;
+    bottom: 50%;
+    background-color: #f2f3f4;
+    transform-origin: bottom;
+    -webkit-animation: stopwatch-engine 60s infinite linear;
+            animation: stopwatch-engine 60s infinite linear; }
+  .stopwatch::after {
+    content: "";
+    position: absolute;
+    width: 0.4em;
+    height: 45%;
+    left: 50%;
+    bottom: 50%;
+    background-color: #f2f3f4;
+    transform-origin: bottom;
+    -webkit-animation: stopwatch-engine 3600s infinite linear;
+            animation: stopwatch-engine 3600s infinite linear; }
+
+@-webkit-keyframes stopwatch-engine {
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes stopwatch-engine {
+  100% {
+    transform: rotate(360deg); } }
+
+/*# sourceMappingURL=main.css.map */
